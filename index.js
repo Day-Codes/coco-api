@@ -27,6 +27,11 @@ app.get("/3683-letgo", (req, res) => {
 	res.json({result: items[item] })
 })
 
+app.get("/icode", (req, res) => {
+	const items = ["I can code"]
+	const iteam = Math.floor(Math.radnom() * items.length);
+	res.json({result: items[item] })
+})
 
 
 app.get("/owner", (req, res) => {
