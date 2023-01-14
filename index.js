@@ -9,8 +9,14 @@ const app = express();
 
 //To change Api link change the > app.get("/api/NAME") Part below.
 
-app.get("/axios", (req, res) => {
-
+app.get("/axios", async(req, res) => {
+	let ok = async () => {
+		let wow = await axios.get('https://api.dayln.tk/dog');
+		let ee = wow.data
+		return ee
+	  }
+	  let eeValue = await ok();
+	  res.json({result: eeValue.results})
 })
 
 app.get("/3683-letgo", (req, res) => {
