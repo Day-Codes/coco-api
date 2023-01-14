@@ -1,5 +1,5 @@
 const express = require("express");
-
+const axios = requrie("axios");
 const app = express();
 
 // OWNED BY DAYLN API!!
@@ -8,6 +8,20 @@ const app = express();
  
 
 //To change Api link change the > app.get("/api/NAME") Part below.
+
+app.get("/axios", (req, res) => {
+
+})
+
+app.get("/3683-letgo", (req, res) => {
+	const items = [
+		"3683 the best","3683 is cool","3683 on top","LETSSS GO! 3683!"
+	]
+	const item = Math.floor(Math.random() * items.length);
+	res.json({result: items[item] })
+})
+
+
 
 app.get("/owner", (req, res) => {
 	const items = [
@@ -387,11 +401,11 @@ const items = ["https://discord.com/oauth2/authorize?scope=bot+applications.comm
 
 app.get("/meme", (req, res) => {
   
-const items = ["https://cdn.discordapp.com/attachments/728634598422216704/939555080380743720/IMG_6069.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555080120709130/IMG_6070.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555079739035678/IMG_6071.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555059581190165/IMG_6074.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555059321163786/IMG_6072.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555059082100786/IMG_6075.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555058897534997/IMG_6076.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555058528419860/IMG_6077.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555058322927636/IMG_6078.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555058071273482/IMG_6079.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555057853145098/IMG_6081.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555057618259988/IMG_6080.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555057362403408/IMG_6073.webp","https://cdn.discordapp.com/attachments/728634598422216704/939555001125183579/IMG_6082.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555000915460146/IMG_6083.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555000688992307/IMG_6089.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555000269557760/IMG_6084.webp","https://cdn.discordapp.com/attachments/728634598422216704/939555000466698350/IMG_6087.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939554999707500556/IMG_6086.webp","https://cdn.discordapp.com/attachments/728634598422216704/939555000005328966/IMG_6085.png","https://cdn.discordapp.com/attachments/728634598422216704/939554786271977482/IMG_6097.png","https://cdn.discordapp.com/attachments/728634598422216704/939554786502651924/IMG_6096.png","https://cdn.discordapp.com/attachments/728634598422216704/939554786783666217/IMG_6091.webp","https://cdn.discordapp.com/attachments/728634598422216704/939554787068874802/IMG_6090.webp","https://cdn.discordapp.com/attachments/728634598422216704/939554787303768094/IMG_6095.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939554787509297223/IMG_6094.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939554787723214919/IMG_6093.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939554788037775400/IMG_6092.jpg","https://cdn.discordapp.com/attachments/931628537176281158/939558998707941487/6D45DC1C-570D-472C-AA07-BAE848FF831C.png"
+const items = ["https://cdn.discordapp.com/attachments/728634598422216704/939555080380743720/IMG_6069.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555080120709130/IMG_6070.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555079739035678/IMG_6071.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555059581190165/IMG_6074.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555059321163786/IMG_6072.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555059082100786/IMG_6075.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555058897534997/IMG_6076.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555058528419860/IMG_6077.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555058322927636/IMG_6078.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555058071273482/IMG_6079.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555057853145098/IMG_6081.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555057618259988/IMG_6080.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555057362403408/IMG_6073.webp","https://cdn.discordapp.com/attachments/728634598422216704/939555001125183579/IMG_6082.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555000915460146/IMG_6083.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555000688992307/IMG_6089.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939555000269557760/IMG_6084.webp","https://cdn.discordapp.com/attachments/728634598422216704/939555000466698350/IMG_6087.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939554999707500556/IMG_6086.webp","https://cdn.discordapp.com/attachments/728634598422216704/939555000005328966/IMG_6085.png","https://cdn.discordapp.com/attachments/728634598422216704/939554786271977482/IMG_6097.png","https://cdn.discordapp.com/attachments/728634598422216704/939554786502651924/IMG_6096.png","https://cdn.discordapp.com/attachments/728634598422216704/939554786783666217/IMG_6091.webp","https://cdn.discordapp.com/attachments/728634598422216704/939554787068874802/IMG_6090.webp","https://cdn.discordapp.com/attachments/728634598422216704/939554787303768094/IMG_6095.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939554787509297223/IMG_6094.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939554787723214919/IMG_6093.jpg","https://cdn.discordapp.com/attachments/728634598422216704/939554788037775400/IMG_6092.jpg","https://cdn.discordapp.com/attachments/931628537176281158/939558998707941487/6D45DC1C-570D-472C-AA07-BAE848FF831C.png",]
 
 
 
- const item = Math.floor(Math.random() * items.length);
+const item = Math.floor(Math.random() * items.length);
  
  res.json({result: items[item] });
 });
